@@ -98,8 +98,7 @@ docker run -v /path/to/config/dir:/config \
 Martin requires at least one PostgreSQL [connection string](#postgresql-connection-string) or a [tile source file](#mbtile-and-pmtile-sources) as a command-line argument. A PG connection string can also be passed via the `DATABASE_URL` environment variable.
 
 ```shell
-martin postgresql://postgres@localhost/db
-martin postgresql://postgres:12345678@localhost:5432/db
+martin postgresql://postgres:[password]@[local_ip]:5432/db
 ```
 
 Martin provides [TileJSON](https://github.com/mapbox/tilejson-spec) endpoint for each [geospatial-enabled](https://postgis.net/docs/using_postgis_dbmanagement.html#geometry_columns) table in your database.
